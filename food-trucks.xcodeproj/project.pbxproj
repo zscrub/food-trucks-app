@@ -17,6 +17,7 @@
 		1467CEEF2682BBA600CB249E /* food_trucksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CEEE2682BBA600CB249E /* food_trucksUITests.swift */; };
 		1467CEFF2682CB9C00CB249E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CEFE2682CB9C00CB249E /* LoginViewController.swift */; };
 		1467CF012682CCD300CB249E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CF002682CCD300CB249E /* SignUpViewController.swift */; };
+		1467CF052682DF6500CB249E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CF042682DF6400CB249E /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1467CEF02682BBA600CB249E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1467CEFE2682CB9C00CB249E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1467CF002682CCD300CB249E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1467CF042682DF6400CB249E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				1467CED52682BBA600CB249E /* Assets.xcassets */,
 				1467CED72682BBA600CB249E /* LaunchScreen.storyboard */,
 				1467CEDA2682BBA600CB249E /* Info.plist */,
+				1467CF042682DF6400CB249E /* Helper.swift */,
 			);
 			path = "food-trucks";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				1467CECF2682BBA300CB249E /* SceneDelegate.swift in Sources */,
 				1467CEFF2682CB9C00CB249E /* LoginViewController.swift in Sources */,
 				1467CF012682CCD300CB249E /* SignUpViewController.swift in Sources */,
+				1467CF052682DF6500CB249E /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
