@@ -141,7 +141,7 @@
         <!--Zip code-->
         <scene sceneID="2nE-OC-fTm">
             <objects>
-                <viewController title="Zip code" id="WDB-2h-bme" customClass="ViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Zip code" id="WDB-2h-bme" customClass="ZipCodeViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJb-Dd-Fcw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
         <!--Map-->
         <scene sceneID="QYX-h0-WVO">
             <objects>
-                <viewController title="Map" id="jyy-nx-sHT" customClass="ViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map" title="Map" id="jyy-nx-sHT" customClass="MapViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pB8-kR-kWI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +230,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="allText" destination="Zs8-Gd-LBj" id="Dcs-Mw-6kG"/>
+                        <outlet property="allText" destination="Zs8-Gd-LBj" id="Z03-IQ-cq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXP-jd-ioM" sceneMemberID="firstResponder"/>

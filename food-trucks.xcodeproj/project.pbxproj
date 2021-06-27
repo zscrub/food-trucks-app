@@ -18,6 +18,8 @@
 		1467CEFF2682CB9C00CB249E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CEFE2682CB9C00CB249E /* LoginViewController.swift */; };
 		1467CF012682CCD300CB249E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CF002682CCD300CB249E /* SignUpViewController.swift */; };
 		1467CF052682DF6500CB249E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CF042682DF6400CB249E /* Helper.swift */; };
+		1482C0FF268913DA009850DB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482C0FE268913DA009850DB /* MapViewController.swift */; };
+		1482C1012689141E009850DB /* ZipCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482C1002689141E009850DB /* ZipCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1467CEFE2682CB9C00CB249E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1467CF002682CCD300CB249E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1467CF042682DF6400CB249E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		1482C0FE268913DA009850DB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1482C1002689141E009850DB /* ZipCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				1467CECE2682BBA300CB249E /* SceneDelegate.swift */,
 				1467CED02682BBA300CB249E /* ViewController.swift */,
 				1467CED22682BBA400CB249E /* Main.storyboard */,
+				1482C1002689141E009850DB /* ZipCodeViewController.swift */,
+				1482C0FE268913DA009850DB /* MapViewController.swift */,
 				1467CF002682CCD300CB249E /* SignUpViewController.swift */,
 				1467CED52682BBA600CB249E /* Assets.xcassets */,
 				1467CED72682BBA600CB249E /* LaunchScreen.storyboard */,
@@ -270,9 +276,11 @@
 				1467CED12682BBA300CB249E /* ViewController.swift in Sources */,
 				1467CECD2682BBA300CB249E /* AppDelegate.swift in Sources */,
 				1467CECF2682BBA300CB249E /* SceneDelegate.swift in Sources */,
+				1482C1012689141E009850DB /* ZipCodeViewController.swift in Sources */,
 				1467CEFF2682CB9C00CB249E /* LoginViewController.swift in Sources */,
 				1467CF012682CCD300CB249E /* SignUpViewController.swift in Sources */,
 				1467CF052682DF6500CB249E /* Helper.swift in Sources */,
+				1482C0FF268913DA009850DB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
