@@ -150,13 +150,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Enter a zip code" id="x0O-Vv-wHg">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="dri-vR-zWe">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="lKq-5A-OoZ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Enter a zip code" id="x0O-Vv-wHg"/>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zip code" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-Bz-L6X">
@@ -230,12 +224,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qbH-LS-xVF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fjo-ph-lbv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fjo-ph-lbv" firstAttribute="trailing" secondItem="qbH-LS-xVF" secondAttribute="trailing" id="Fjm-Kz-G2a"/>
+                            <constraint firstItem="qbH-LS-xVF" firstAttribute="top" secondItem="fjo-ph-lbv" secondAttribute="top" id="JYX-ro-aKh"/>
+                            <constraint firstItem="fjo-ph-lbv" firstAttribute="bottom" secondItem="qbH-LS-xVF" secondAttribute="bottom" id="qWM-tw-ulC"/>
+                            <constraint firstItem="qbH-LS-xVF" firstAttribute="leading" secondItem="fjo-ph-lbv" secondAttribute="leading" id="wnU-Z6-vvg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="allText" destination="Zs8-Gd-LBj" id="Z03-IQ-cq7"/>
+                        <outlet property="mapView" destination="qbH-LS-xVF" id="N0b-38-dh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXP-jd-ioM" sceneMemberID="firstResponder"/>
@@ -243,9 +247,6 @@
             <point key="canvasLocation" x="3821.739130434783" y="-188.16964285714286"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="lKq-5A-OoZ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
