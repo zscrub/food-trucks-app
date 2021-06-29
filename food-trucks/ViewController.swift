@@ -7,9 +7,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var allText: UITextView!
-    @IBOutlet weak var place: UILabel!
-    @IBOutlet weak var zipcode: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()

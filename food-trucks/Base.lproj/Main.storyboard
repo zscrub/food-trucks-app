@@ -141,7 +141,7 @@
         <!--Zip code-->
         <scene sceneID="2nE-OC-fTm">
             <objects>
-                <viewController title="Zip code" id="WDB-2h-bme" customClass="ZipCodeViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="zip" title="Zip code" id="WDB-2h-bme" customClass="ZipCodeViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJb-Dd-Fcw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,6 +184,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="zipcode:" destination="oCk-8J-bOY" eventType="editingDidEnd" id="emx-UT-Xjz"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-3e-fsO">
                                 <rect key="frame" x="87" y="401" width="240" height="128"/>
@@ -202,9 +205,11 @@
                     <connections>
                         <outlet property="allText" destination="4NY-3e-fsO" id="lgW-Vw-KKQ"/>
                         <outlet property="zipcode" destination="eF7-Ls-TdL" id="G1N-eu-1hZ"/>
+                        <segue destination="jyy-nx-sHT" kind="presentation" identifier="zip" modalPresentationStyle="fullScreen" id="FO8-aj-ofP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvd-jz-Z6M" sceneMemberID="firstResponder"/>
+                <exit id="oCk-8J-bOY" userLabel="Exit" sceneMemberID="exit"/>
                 <barButtonItem title="Back" id="wwE-R0-Vbq"/>
             </objects>
             <point key="canvasLocation" x="2790" y="-188"/>
@@ -218,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zs8-Gd-LBj">
-                                <rect key="frame" x="87" y="292" width="240" height="220"/>
+                                <rect key="frame" x="87" y="338" width="240" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
