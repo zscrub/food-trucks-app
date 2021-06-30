@@ -8,9 +8,10 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var allText: UITextView!
+    
     
     var zip_ = ""
     override func viewDidLoad() {
@@ -26,22 +27,24 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             if let latDouble = Double(lat) {
                 if let lonDouble = Double(lon) {
                     let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(latDouble), longitude: CLLocationDegrees(lonDouble))
-//                    let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-//                    let region = MKCoordinateRegion(center: location, span: span)
-//                    print(lat, lon)
-//                    self.mapView.setRegion(region, animated: true)
-//                    let annotation = MKPointAnnotation()
-//                    annotation.coordinate = location
-//                    annotation.title = self.zip_
-//                    annotation.subtitle = data[0].display_name
-//                    self.mapView.addAnnotation(annotation)
-//
-//                    let region = CLCircularRegion(center: location, radius: 15000, identifier: "zipCircle")
+                    
+                    self.mapView.setCenter(location, animated: true)
+                    
+                    let span = MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4)
+                    let region = MKCoordinateRegion(center: location, span: span)
+                    print(lat, lon)
+                    self.mapView.setRegion(region, animated: true)
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = location
+                    annotation.title = self.zip_
+                    annotation.subtitle = data[0].display_name
+                    self.mapView.addAnnotation(annotation)
 
+                    
                     DispatchQueue.global(qos: .background).async {
                         DispatchQueue.main.async {
-                            self.mapView.removeOverlays(self.mapView.overlays)
-                            self.mapView.addOverlay(MKCircle(center: location, radius: 15000))
+                            self.showCircle(coordinate: location, radius: 15000)
+                            self.mapView.delegate = self
                         }
                     }
                     
@@ -49,14 +52,27 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
           }
         })
-
     }
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        if let overlay = overlay as? MKCircle {
-            let circleRenderer = MKCircleRenderer(circle: overlay)
-            circleRenderer.fillColor = UIColor.blue
-            return circleRenderer
-        }
-    return MKOverlayRenderer(overlay: overlay)
+    func showCircle(coordinate: CLLocationCoordinate2D,
+                    radius: CLLocationDistance) {
+        let circle = MKCircle(center: coordinate,
+                              radius: radius)
+        mapView.addOverlay(circle)
+    }
+}
+
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView,
+                 rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        // If you want to include other shapes, then this check is needed.
+        // If you only want circles, then remove it.
+        
+        let circleOverlay = overlay as! MKCircle
+        let circleRenderer = MKCircleRenderer(overlay: circleOverlay)
+        circleRenderer.fillColor = .black
+        circleRenderer.alpha = 0.25
+
+        return circleRenderer
+        
     }
 }
