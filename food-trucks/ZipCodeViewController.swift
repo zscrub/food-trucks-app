@@ -13,11 +13,17 @@ class ZipCodeViewController: UIViewController {
     @IBOutlet public weak var zipcode: UITextField!
     
     var zip = ""
+    var user_ = ""
+    var password_ = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+//        allText.text = welcomeStr
+        let loginvc = LoginViewController()
+        loginvc.login_(user: user_, password: password_, loginCompletionHandler: {data, error in
+            self.allText.text = "Welcome, \(self.user_)"
+        })
     }
     
     @IBAction func search(_ sender: UIButton) {
@@ -31,6 +37,33 @@ class ZipCodeViewController: UIViewController {
 //        getData(zip: "07054")
     }
 }
+
+//func getBusinessID(name: String, nameCompletionHandler: @escaping ([Response]?, Error?) -> Void) {
+//    let url = URL(string: "https://7e4ea7e87de4.ngrok.io/business/id")!
+//    let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+//
+//    guard let data = data else { return }
+//    do {
+//      // parse json data and return it
+//        let decoder = JSONDecoder()
+//        var result: [Response]?
+//        result = try decoder.decode([Response].self, from: data)
+//        if let nameID = result {
+//            nameCompletionHandler(nameID, nil)
+//      }
+//
+//    } catch let parseErr {
+//      print("JSON Parsing Error", parseErr)
+//      nameCompletionHandler(nil, parseErr)
+//    }
+//
+//  })
+//
+//  task.resume()
+//  // function will end here and return
+//  // then after receiving HTTP response, the completionHandler will be called
+//}
+
 
 func getData(zip: String, zipCompletionHandler: @escaping ([Response]?, Error?) -> Void) {
     let url = URL(string: "https://us1.locationiq.com/v1/search.php?key=pk.9684621c328d7f6c2548e794b8b05772&postalcode=\(zip)&country=us&format=json")!

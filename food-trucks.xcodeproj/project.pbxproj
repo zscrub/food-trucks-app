@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143471792692DD8700A1E190 /* FoodTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143471782692DD8700A1E190 /* FoodTruckViewController.swift */; };
 		1467CECD2682BBA300CB249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CECC2682BBA300CB249E /* AppDelegate.swift */; };
 		1467CECF2682BBA300CB249E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CECE2682BBA300CB249E /* SceneDelegate.swift */; };
 		1467CED12682BBA300CB249E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CED02682BBA300CB249E /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143471782692DD8700A1E190 /* FoodTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckViewController.swift; sourceTree = "<group>"; };
 		1467CEC92682BBA300CB249E /* food-trucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-trucks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1467CECC2682BBA300CB249E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1467CECE2682BBA300CB249E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		1467CECB2682BBA300CB249E /* food-trucks */ = {
 			isa = PBXGroup;
 			children = (
+				143471782692DD8700A1E190 /* FoodTruckViewController.swift */,
 				1467CEFE2682CB9C00CB249E /* LoginViewController.swift */,
 				1467CF002682CCD300CB249E /* SignUpViewController.swift */,
 				1482C1002689141E009850DB /* ZipCodeViewController.swift */,
@@ -281,6 +284,7 @@
 				1467CF012682CCD300CB249E /* SignUpViewController.swift in Sources */,
 				1467CF052682DF6500CB249E /* Helper.swift in Sources */,
 				1482C0FF268913DA009850DB /* MapViewController.swift in Sources */,
+				143471792692DD8700A1E190 /* FoodTruckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

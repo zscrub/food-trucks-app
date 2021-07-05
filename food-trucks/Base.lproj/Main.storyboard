@@ -11,7 +11,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" title="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OR6-ez-TEs">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OR6-ez-TEs">
                                 <rect key="frame" x="103" y="291" width="208" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -34,22 +34,6 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjI-3y-k2o">
-                                <rect key="frame" x="172" y="421" width="70" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log in"/>
-                                <connections>
-                                    <action selector="login_btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktc-bt-iMr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khr-tv-Wfk">
-                                <rect key="frame" x="172" y="483" width="70" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign up"/>
-                                <connections>
-                                    <segue destination="D7l-NX-MDF" kind="presentation" modalPresentationStyle="fullScreen" id="dXS-8G-WyN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sie-IS-eR6">
                                 <rect key="frame" x="235" y="768" width="159" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -65,12 +49,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzO-Ml-Zzb">
+                                <rect key="frame" x="186" y="414" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="login_butn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BF1-Fw-VGe"/>
+                                    <segue destination="WDB-2h-bme" kind="presentation" identifier="login" animates="NO" modalPresentationStyle="fullScreen" id="1Up-h0-Vhf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khr-tv-Wfk">
+                                <rect key="frame" x="172" y="452" width="70" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <segue destination="D7l-NX-MDF" kind="presentation" modalPresentationStyle="fullScreen" id="dXS-8G-WyN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="login_btn" destination="NjI-3y-k2o" id="NyX-U0-PzU"/>
                         <outlet property="password_text" destination="EHI-0J-pcU" id="am6-CO-9TB"/>
                         <outlet property="username_text" destination="OR6-ez-TEs" id="gJN-tn-Aqo"/>
                     </connections>
@@ -218,7 +218,7 @@
                 <exit id="oCk-8J-bOY" userLabel="Exit" sceneMemberID="exit"/>
                 <barButtonItem title="Back" id="wwE-R0-Vbq"/>
             </objects>
-            <point key="canvasLocation" x="2790" y="-188"/>
+            <point key="canvasLocation" x="2016" y="-188"/>
         </scene>
         <!--Map-->
         <scene sceneID="QYX-h0-WVO">
@@ -244,9 +244,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Map" id="VeX-N3-ZGR">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="D7Q-fO-idZ">
+                                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="Slu-5o-obU">
                                             <connections>
-                                                <segue destination="WDB-2h-bme" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="eeV-3e-rww"/>
+                                                <segue destination="agz-7W-WiH" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="a8Q-XX-EtY"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -269,7 +269,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXP-jd-ioM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3821.739130434783" y="-188.16964285714286"/>
+            <point key="canvasLocation" x="3186" y="-188"/>
+        </scene>
+        <!--Food Truck View Controller-->
+        <scene sceneID="gLE-iI-qZ1">
+            <objects>
+                <viewController id="agz-7W-WiH" customClass="FoodTruckViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="opf-n6-ITZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mcp-X6-BVJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HfT-ZW-d4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4252" y="-188"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="5rV-XG-283">
@@ -315,10 +330,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UTb-xf-cF3"/>
-        <segue reference="XZ3-qq-HIL"/>
+        <segue reference="1Up-h0-Vhf"/>
+        <segue reference="AAL-Qf-H8P"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
