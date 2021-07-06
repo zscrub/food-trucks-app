@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     //        let password_ = String(describing: password_text.text!)
     //
     //        ngrok
-            let url_ = "https://7e4ea7e87de4.ngrok.io"
+            let url_ = "https://eaf40b5390cd.ngrok.io"
     //        let params = ["username":username_text.text!, "password":password_text.text!]
             var requestBodyComponenets = URLComponents()
         requestBodyComponenets.queryItems = [URLQueryItem(name: "username", value: "\(user)"),
@@ -58,15 +58,17 @@ class LoginViewController: UIViewController {
                     print("No response... API down??")
                 }
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data) as! Dictionary<String, String>
-                    print(json)
-                    if json["detail"] != "Invalid credentials" {
-                        print("logged in!")
-                        loginCompletionHandler(self.user_, nil)
-                        self.welcomeStr_ = "Welcome, \(user))"
-                    }
-                    else {
-                        print("not logged in :(")
+                    let json = try JSONSerialization.jsonObject(with: data) as? Dictionary<String, String>
+                    if json != nil {
+                        if json?["detail"] != "Invalid credentials" {
+                            print("logged in!")
+                            loginCompletionHandler(self.user_, nil)
+                            self.welcomeStr_ = "Welcome, \(user))"
+                        }
+                        else {
+                            print("not logged in :(")
+                        }
+                    
                     }
                 } catch {
                     print("error")

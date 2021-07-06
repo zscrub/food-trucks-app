@@ -246,7 +246,7 @@
                                     <navigationItem title="Map" id="VeX-N3-ZGR">
                                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="Slu-5o-obU">
                                             <connections>
-                                                <segue destination="agz-7W-WiH" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="a8Q-XX-EtY"/>
+                                                <segue destination="agz-7W-WiH" kind="presentation" modalPresentationStyle="fullScreen" id="a8Q-XX-EtY"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -271,6 +271,64 @@
             </objects>
             <point key="canvasLocation" x="3186" y="-188"/>
         </scene>
+        <!--Edit Business Name View Controller-->
+        <scene sceneID="OQk-jN-3Ke">
+            <objects>
+                <viewController id="Fhj-6E-33J" customClass="EditBusinessNameViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QLy-cc-kYd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-iU-9o7">
+                                <rect key="frame" x="-1" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Edit business name" id="EcE-8n-Ebg">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="xe7-r7-ccc">
+                                            <connections>
+                                                <segue destination="agz-7W-WiH" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Hay-rV-Mj1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58V-qP-3oW">
+                                <rect key="frame" x="123" y="192" width="169" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ps-0h-Yka">
+                                <rect key="frame" x="122" y="253" width="169" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCR-F4-2Ak">
+                                <rect key="frame" x="155" y="295" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitBusinessName:" destination="Fhj-6E-33J" eventType="touchUpInside" id="s4K-vz-LhB"/>
+                                    <segue destination="qk0-qo-9Ba" kind="presentation" identifier="name_" id="AAI-wX-Y2M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WTd-7m-etO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="id_text" destination="58V-qP-3oW" id="46Z-gK-kij"/>
+                        <outlet property="name_text" destination="0ps-0h-Yka" id="IJW-Tc-6L2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uz9-w6-yYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.9420289855075" y="697.76785714285711"/>
+        </scene>
         <!--Food Truck View Controller-->
         <scene sceneID="gLE-iI-qZ1">
             <objects>
@@ -278,13 +336,71 @@
                     <view key="view" contentMode="scaleToFill" id="opf-n6-ITZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asR-xG-oEA">
+                                <rect key="frame" x="250" y="252" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit location"/>
+                                <connections>
+                                    <segue destination="6ep-p6-UgC" kind="presentation" id="mHw-Xf-gCW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fos-xn-ku1">
+                                <rect key="frame" x="79" y="252" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit name"/>
+                                <connections>
+                                    <segue destination="Fhj-6E-33J" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="dNf-PC-ULQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MU-GP-QwK">
+                                <rect key="frame" x="60" y="364" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit description"/>
+                                <connections>
+                                    <segue destination="nOo-ja-2rr" kind="presentation" id="6mD-hd-HM6"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-DJ-kTK">
+                                <rect key="frame" x="0.0" y="31" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Modify Business" id="1uq-oa-gXJ"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDV-NE-iBG">
+                                <rect key="frame" x="246" y="364" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit schedule"/>
+                                <connections>
+                                    <segue destination="3Zc-24-tgc" kind="presentation" id="tXc-uI-LjG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zip code" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YPC-Fh-98p">
+                                <rect key="frame" x="103" y="492" width="208" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="zipcode:" destination="oCk-8J-bOY" eventType="editingDidEnd" id="crW-MB-cQs"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZz-IR-dpu">
+                                <rect key="frame" x="164" y="534" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back to map"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mcp-X6-BVJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfT-ZW-d4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4252" y="-188"/>
+            <point key="canvasLocation" x="3186" y="1104"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="5rV-XG-283">
@@ -328,8 +444,138 @@
             </objects>
             <point key="canvasLocation" x="4252.1739130434789" y="-974.33035714285711"/>
         </scene>
+        <!--Edit Business Location View Controller-->
+        <scene sceneID="fNg-sh-A5X">
+            <objects>
+                <viewController id="6ep-p6-UgC" customClass="EditBusinessLocationViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zZE-mM-BCo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prF-wP-1ZJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Edit business location" id="B8M-ON-IFd">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="AeZ-x1-kOB">
+                                            <connections>
+                                                <segue destination="agz-7W-WiH" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Yd8-iL-0bT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PVM-vR-0xQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqp-4t-OKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4252" y="698"/>
+        </scene>
+        <!--Edit Business Description View Controller-->
+        <scene sceneID="fEn-2Y-gqn">
+            <objects>
+                <viewController id="nOo-ja-2rr" customClass="EditBusinessDescriptionViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VYv-eK-Rn2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdM-eN-gY6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Edit business description" id="zbB-XT-n4F">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="kxd-Sj-zMk">
+                                            <connections>
+                                                <segue destination="agz-7W-WiH" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="d71-hz-nsi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mez-lP-1ka"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oM3-rU-c4k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="1515"/>
+        </scene>
+        <!--Edit Business Schedule View Controller-->
+        <scene sceneID="FYV-eP-6nn">
+            <objects>
+                <viewController id="3Zc-24-tgc" customClass="EditBusinessScheduleViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9iJ-tx-u3O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05D-jq-F3N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Edit business schedule" id="yIr-tq-QXd">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="EBQ-xM-xtX">
+                                            <connections>
+                                                <segue destination="agz-7W-WiH" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="1hz-U2-9OC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PEd-qF-1eP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sE3-ch-hiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4251" y="1515"/>
+        </scene>
+        <!--Successful Name Edit View Controller-->
+        <scene sceneID="WoQ-Za-Bq3">
+            <objects>
+                <viewController id="qk0-qo-9Ba" customClass="SuccessfulNameEditViewController" customModule="food_trucks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBD-m8-ce4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r96-kA-6Jo">
+                                <rect key="frame" x="0.0" y="0.0" width="411" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Success!" id="UNd-UO-grb"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWr-pj-cX4">
+                                <rect key="frame" x="121" y="250" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Return to Business Editor"/>
+                                <connections>
+                                    <segue destination="agz-7W-WiH" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="rz0-Pf-EJf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Business name changed successfully!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXz-fC-XpR">
+                                <rect key="frame" x="65" y="90" width="289" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tcb-A9-KQ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itr-r5-HyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="698"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Hay-rV-Mj1"/>
         <segue reference="1Up-h0-Vhf"/>
         <segue reference="AAL-Qf-H8P"/>
     </inferredMetricsTieBreakers>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140C8B142693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C8B132693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift */; };
 		143471792692DD8700A1E190 /* FoodTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143471782692DD8700A1E190 /* FoodTruckViewController.swift */; };
 		1467CECD2682BBA300CB249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CECC2682BBA300CB249E /* AppDelegate.swift */; };
 		1467CECF2682BBA300CB249E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CECE2682BBA300CB249E /* SceneDelegate.swift */; };
@@ -21,6 +22,10 @@
 		1467CF052682DF6500CB249E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CF042682DF6400CB249E /* Helper.swift */; };
 		1482C0FF268913DA009850DB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482C0FE268913DA009850DB /* MapViewController.swift */; };
 		1482C1012689141E009850DB /* ZipCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482C1002689141E009850DB /* ZipCodeViewController.swift */; };
+		14BF9CBC26939176000E212B /* EditBusinessNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BF9CBB26939176000E212B /* EditBusinessNameViewController.swift */; };
+		14BF9CBE269391AC000E212B /* EditBusinessDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BF9CBD269391AC000E212B /* EditBusinessDescriptionViewController.swift */; };
+		14BF9CC0269391C7000E212B /* EditBusinessLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BF9CBF269391C7000E212B /* EditBusinessLocationViewController.swift */; };
+		14BF9CC2269391DA000E212B /* EditBusinessScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BF9CC1269391DA000E212B /* EditBusinessScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140C8B132693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulNameEditViewController.swift; sourceTree = "<group>"; };
 		143471782692DD8700A1E190 /* FoodTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckViewController.swift; sourceTree = "<group>"; };
 		1467CEC92682BBA300CB249E /* food-trucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-trucks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1467CECC2682BBA300CB249E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,10 @@
 		1467CF042682DF6400CB249E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		1482C0FE268913DA009850DB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1482C1002689141E009850DB /* ZipCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeViewController.swift; sourceTree = "<group>"; };
+		14BF9CBB26939176000E212B /* EditBusinessNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessNameViewController.swift; sourceTree = "<group>"; };
+		14BF9CBD269391AC000E212B /* EditBusinessDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessDescriptionViewController.swift; sourceTree = "<group>"; };
+		14BF9CBF269391C7000E212B /* EditBusinessLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessLocationViewController.swift; sourceTree = "<group>"; };
+		14BF9CC1269391DA000E212B /* EditBusinessScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessScheduleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,11 @@
 		1467CECB2682BBA300CB249E /* food-trucks */ = {
 			isa = PBXGroup;
 			children = (
+				140C8B132693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift */,
+				14BF9CC1269391DA000E212B /* EditBusinessScheduleViewController.swift */,
+				14BF9CBF269391C7000E212B /* EditBusinessLocationViewController.swift */,
+				14BF9CBD269391AC000E212B /* EditBusinessDescriptionViewController.swift */,
+				14BF9CBB26939176000E212B /* EditBusinessNameViewController.swift */,
 				143471782692DD8700A1E190 /* FoodTruckViewController.swift */,
 				1467CEFE2682CB9C00CB249E /* LoginViewController.swift */,
 				1467CF002682CCD300CB249E /* SignUpViewController.swift */,
@@ -278,13 +293,18 @@
 			files = (
 				1467CED12682BBA300CB249E /* ViewController.swift in Sources */,
 				1467CECD2682BBA300CB249E /* AppDelegate.swift in Sources */,
+				14BF9CC2269391DA000E212B /* EditBusinessScheduleViewController.swift in Sources */,
 				1467CECF2682BBA300CB249E /* SceneDelegate.swift in Sources */,
+				14BF9CBC26939176000E212B /* EditBusinessNameViewController.swift in Sources */,
+				14BF9CBE269391AC000E212B /* EditBusinessDescriptionViewController.swift in Sources */,
 				1482C1012689141E009850DB /* ZipCodeViewController.swift in Sources */,
 				1467CEFF2682CB9C00CB249E /* LoginViewController.swift in Sources */,
 				1467CF012682CCD300CB249E /* SignUpViewController.swift in Sources */,
 				1467CF052682DF6500CB249E /* Helper.swift in Sources */,
+				14BF9CC0269391C7000E212B /* EditBusinessLocationViewController.swift in Sources */,
 				1482C0FF268913DA009850DB /* MapViewController.swift in Sources */,
 				143471792692DD8700A1E190 /* FoodTruckViewController.swift in Sources */,
+				140C8B142693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
