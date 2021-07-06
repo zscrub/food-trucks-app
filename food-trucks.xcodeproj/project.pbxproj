@@ -123,6 +123,7 @@
 		1467CECB2682BBA300CB249E /* food-trucks */ = {
 			isa = PBXGroup;
 			children = (
+				1415E8492694EAEE00CBB315 /* NewBusinessViewController.swift */,
 				140C8B132693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift */,
 				14BF9CC1269391DA000E212B /* EditBusinessScheduleViewController.swift */,
 				14BF9CBF269391C7000E212B /* EditBusinessLocationViewController.swift */,
@@ -141,7 +142,6 @@
 				1467CED72682BBA600CB249E /* LaunchScreen.storyboard */,
 				1467CEDA2682BBA600CB249E /* Info.plist */,
 				1467CF042682DF6400CB249E /* Helper.swift */,
-				1415E8492694EAEE00CBB315 /* NewBusinessViewController.swift */,
 			);
 			path = "food-trucks";
 			sourceTree = "<group>";
