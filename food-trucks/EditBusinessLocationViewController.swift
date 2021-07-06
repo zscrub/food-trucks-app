@@ -8,22 +8,35 @@
 import UIKit
 
 class EditBusinessLocationViewController: UIViewController {
-
+    @IBOutlet public weak var id_text: UITextField!
+    @IBOutlet public weak var lat_text: UITextField!
+    @IBOutlet public weak var lon_text: UITextField!
+    
+    var id_ = ""
+    var lat = ""
+    var lon = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func submitBusinessLocation(_ sender: Any) {
+        print("id is \(id_text.text!), \(lat_text.text!) and \(lon_text.text!)")
+        id_ = id_text.text!
+        lat = lat_text.text!
+        lon = lon_text.text!
+        
+        let stringUrl = "https://81010fc46b4b.ngrok.io/businesses/update_location?id=\(id_)&lat=\(lat)&lng=\(lon)"
+        
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let url_ = URL(string: stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        print(url_!)
+        var request = URLRequest(url: url_!)
+        request.httpMethod = "PATCH"
+        let session = URLSession.shared
+        let task = session.dataTask(with: request)
+        task.resume()
+        
     }
-    */
-
 }

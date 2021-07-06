@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		140C8B142693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C8B132693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift */; };
+		1415E84A2694EAEE00CBB315 /* NewBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415E8492694EAEE00CBB315 /* NewBusinessViewController.swift */; };
 		143471792692DD8700A1E190 /* FoodTruckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143471782692DD8700A1E190 /* FoodTruckViewController.swift */; };
 		1467CECD2682BBA300CB249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CECC2682BBA300CB249E /* AppDelegate.swift */; };
 		1467CECF2682BBA300CB249E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467CECE2682BBA300CB249E /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		140C8B132693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulNameEditViewController.swift; sourceTree = "<group>"; };
+		1415E8492694EAEE00CBB315 /* NewBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBusinessViewController.swift; sourceTree = "<group>"; };
 		143471782692DD8700A1E190 /* FoodTruckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckViewController.swift; sourceTree = "<group>"; };
 		1467CEC92682BBA300CB249E /* food-trucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-trucks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1467CECC2682BBA300CB249E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				1467CED72682BBA600CB249E /* LaunchScreen.storyboard */,
 				1467CEDA2682BBA600CB249E /* Info.plist */,
 				1467CF042682DF6400CB249E /* Helper.swift */,
+				1415E8492694EAEE00CBB315 /* NewBusinessViewController.swift */,
 			);
 			path = "food-trucks";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				1467CF052682DF6500CB249E /* Helper.swift in Sources */,
 				14BF9CC0269391C7000E212B /* EditBusinessLocationViewController.swift in Sources */,
 				1482C0FF268913DA009850DB /* MapViewController.swift in Sources */,
+				1415E84A2694EAEE00CBB315 /* NewBusinessViewController.swift in Sources */,
 				143471792692DD8700A1E190 /* FoodTruckViewController.swift in Sources */,
 				140C8B142693F6E000E2DFD3 /* SuccessfulNameEditViewController.swift in Sources */,
 			);

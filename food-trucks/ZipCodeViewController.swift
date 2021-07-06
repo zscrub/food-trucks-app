@@ -32,9 +32,12 @@ class ZipCodeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! MapViewController
-        vc.zip_ = self.zip
-//        getData(zip: "07054")
+        if segue.identifier == "zip" {
+            let vc = segue.destination as! MapViewController
+            vc.zip_ = self.zip
+    //        getData(zip: "07054")
+            
+        }
     }
 }
 

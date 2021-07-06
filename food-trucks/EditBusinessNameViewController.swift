@@ -27,7 +27,7 @@ class EditBusinessNameViewController: UIViewController {
         name_ = name_text.text!
         print("id is \(id_) and \(name_)")
         
-        let stringUrl = "https://240903b1e9b1.ngrok.io/businesses/update_name?id=\(id_)&name=\(name_)"
+        let stringUrl = "https://81010fc46b4b.ngrok.io/businesses/update_name?id=\(id_)&name=\(name_)"
         let url_ = URL(string: stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         print(url_!)
         var request = URLRequest(url: url_!)
