@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
                                                  URLQueryItem(name: "password", value:"\(password)")]
 
 
-            var request = URLRequest(url: URL(string: "\(url_)/users/auth/token")!)
+            var request = URLRequest(url: URL(string: "\(url_)users/auth/token")!)
             request.httpMethod = "POST"
             request.httpBody = requestBodyComponenets.query?.data(using: .utf8)
             //        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
