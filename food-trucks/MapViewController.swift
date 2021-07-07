@@ -51,7 +51,7 @@ class MapViewController: UIViewController {
 //                    self.mapView.addAnnotation(annotation2)
                     
                     // API call to get all food truck locations
-                    let url = URL(string: "https://81010fc46b4b.ngrok.io/businesses/")!
+                    let url = URL(string: "https://zachary.yadiiiig.com/api/businesses/")!
                     let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
 
                     guard let data = data else { return }

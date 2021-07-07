@@ -27,7 +27,7 @@ class EditBusinessLocationViewController: UIViewController {
         lat = lat_text.text!
         lon = lon_text.text!
         
-        let stringUrl = "https://81010fc46b4b.ngrok.io/businesses/update_location?id=\(id_)&lat=\(lat)&lng=\(lon)"
+        let stringUrl = "https://zachary.yadiiiig.com/api/businesses/update_location?id=\(id_)&lat=\(lat)&lng=\(lon)"
         
 
         let url_ = URL(string: stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)

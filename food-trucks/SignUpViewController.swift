@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController {
         let password_ = String(describing: password.text!)
         let account_type = "c"
         
-        let url_ = "https://81010fc46b4b.ngrok.io"
+        let url_ = "https://zachary.yadiiiig.com/api/"
         
         let params = ["username":username_, "email":email_, "password":password_, "account_type":account_type]
 

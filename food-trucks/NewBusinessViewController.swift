@@ -34,7 +34,7 @@ class NewBusinessViewController: UIViewController {
         lat = lat_text.text!
         lon = lon_text.text!
         ownerid = ownerid_text.text!
-        let url_ = "https://81010fc46b4b.ngrok.io"
+        let url_ = "https://zachary.yadiiiig.com/api/"
         //
         let params = ["name":name, "date":date, "description":description_, "lat":lat, "lng":lon, "ownerid":ownerid]
         //

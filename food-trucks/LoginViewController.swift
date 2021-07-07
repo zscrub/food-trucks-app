@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     //        let password_ = String(describing: password_text.text!)
     //
     //        ngrok
-            let url_ = "https://81010fc46b4b.ngrok.io"
+            let url_ = "https://zachary.yadiiiig.com/api/"
     //        let params = ["username":username_text.text!, "password":password_text.text!]
             var requestBodyComponenets = URLComponents()
         requestBodyComponenets.queryItems = [URLQueryItem(name: "username", value: "\(user)"),

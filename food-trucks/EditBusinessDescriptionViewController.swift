@@ -26,7 +26,7 @@ class EditBusinessDescriptionViewController: UIViewController {
         description_ = description_text.text!
         print("id is \(id) and \(description_)")
         
-        let stringUrl = "https://81010fc46b4b.ngrok.io/businesses/update_description?id=\(id)&description=\(description_)"
+        let stringUrl = "https://zachary.yadiiiig.com/api/businesses/update_description?id=\(id)&description=\(description_)"
         let url_ = URL(string: stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         print(url_!)
         var request = URLRequest(url: url_!)

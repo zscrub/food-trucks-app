@@ -907,7 +907,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POP-7R-XY0">
-                                <rect key="frame" x="0.0" y="0.0" width="411" height="44"/>
+                                <rect key="frame" x="-1" y="0.0" width="410" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Success!" id="bQu-Yw-peZ"/>
@@ -939,8 +939,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ex9-oX-kK2"/>
-        <segue reference="Hhu-Jp-dhe"/>
+        <segue reference="a8Q-XX-EtY"/>
+        <segue reference="FO8-aj-ofP"/>
         <segue reference="1Up-h0-Vhf"/>
         <segue reference="XZ3-qq-HIL"/>
     </inferredMetricsTieBreakers>

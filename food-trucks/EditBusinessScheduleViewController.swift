@@ -26,7 +26,7 @@ class EditBusinessScheduleViewController: UIViewController {
         date = date_text.text!
         
         
-        let stringUrl = "https://81010fc46b4b.ngrok.io/businesses/update_date?id=\(id_)&date=\(date)"
+        let stringUrl = "https://zachary.yadiiiig.com/api/businesses/update_date?id=\(id_)&date=\(date)"
         
 
         let url_ = URL(string: stringUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
