@@ -25,9 +25,11 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let zip_vc = segue.destination as! ZipCodeViewController
-        zip_vc.user_ = self.user_
-        zip_vc.password_ = self.password_
+        if segue.identifier == "zip" {
+                let zip_vc = segue.destination as! ZipCodeViewController
+                zip_vc.user_ = self.user_
+                zip_vc.password_ = self.password_
+        }
     }
     
     func login_(user: String, password: String, loginCompletionHandler: @escaping ((String?, Error?)->Void) ) {
@@ -61,6 +63,7 @@ class LoginViewController: UIViewController {
                     let json = try JSONSerialization.jsonObject(with: data) as? Dictionary<String, String>
                     if json != nil {
                         if json?["detail"] != "Invalid credentials" {
+                            print(json!)
                             print("logged in!")
                             loginCompletionHandler(self.user_, nil)
                             self.welcomeStr_ = "Welcome, \(user))"
