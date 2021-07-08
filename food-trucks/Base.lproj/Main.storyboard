@@ -608,9 +608,9 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf7-N6-Q21">
-                                <rect key="frame" x="155" y="433" width="105" height="30"/>
+                                <rect key="frame" x="152" y="433" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create account"/>
+                                <state key="normal" title="Create business"/>
                                 <connections>
                                     <action selector="createAcc" destination="D7l-NX-MDF" eventType="touchUpInside" id="ILY-9c-ya3"/>
                                     <action selector="submitNewBusiness:" destination="t7p-FE-psI" eventType="touchUpInside" id="FEQ-Aq-SiA"/>
@@ -939,7 +939,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a8Q-XX-EtY"/>
+        <segue reference="n4Z-fh-h8K"/>
         <segue reference="FO8-aj-ofP"/>
         <segue reference="1Up-h0-Vhf"/>
         <segue reference="XZ3-qq-HIL"/>
